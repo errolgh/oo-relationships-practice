@@ -32,21 +32,17 @@ attr_reader(:bakery_name)
     end
   end
 
-  def average_calories
+  def average_calories ###HOMEWORK###
     # should return a number totaling the average number of calories for the desserts sold at this bakery
-  
-    self.desserts.map do |dessert|
-      dessert.calories
+    arr_desserts_by_calories = self.desserts.map {|dessert| dessert.calories}
+    num_of_desserts = arr_desserts_by_calories.count
+    arr_desserts_by_calories.sum / num_of_desserts
   end
+
+  def shopping_list ###HOMEWORK###
+    # should return a string of names for ingredients for the bakery
+    binding.pry
+    self.ingredients.map {|ingredient| ingredient.name}.join(", ")
   end
-  #
-  # def shopping_list
-  #   # should return a string of names for ingredients for the bakery
-  # end
+    #I'll be using .join to turn an array into a string separated by ", "s.
 end
-
-
-# ingredients.all.select
-
-
-# desserts_bakers = [deserrt1, dessert2, dessert3]

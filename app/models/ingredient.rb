@@ -16,18 +16,22 @@ attr_reader(:name, :dessert, :calories)
     # should return an array of all ingredients
     @@all
   end
-
+  
   def bakery
     self.dessert.bakery
     # should return the bakery object for the bakery that uses that ingredient
   end
-  #
-  # def self.find_all_by_name(ingredient)
-  #   # should take a string argument return an array of all ingredients that include that string in their name
-  # end
-  #
-  # def self.find_all_by_name(name)
-  #     # might return ['chocolate sprinkles', 'chocolate mousse', 'chocolate']
+
+  def self.find_all_by_name(ingredient) ###HOMEWORK###
+    # should take a string argument return an array of all ingredients that include that string in their name
+    arr_of_associated_ingredients = []
+    self.all.select do |item|
+      if item.name.include?(ingredient)
+        arr_of_associated_ingredients << self
+      end
+    end
+  end
+# might return ['chocolate sprinkles', 'chocolate mousse', 'chocolate']
   #     # make sure you aren't just looking for exact matches (like 'chocolate' == 'chocolate')
   # end
 

@@ -19,7 +19,7 @@ bruno = Bakery.new("Bruno's Baked Goods")
 
 #DESSERT
 ppg = Dessert.new("Powerpuff Girls", profx)
-mojo = Dessert.new("Mojojo Cookies", profx)
+mojo = Dessert.new("Mojo Jojo Cookies", profx)
 chocolate_cake = Dessert.new("Chocolate Cake", bruno)
 spice_cookie = Dessert.new("Spice Cookie", insomnia)
 
@@ -30,10 +30,11 @@ sugar = Ingredient.new("Sugar", chocolate_cake, 500)
 spice = Ingredient.new("Spice", chocolate_cake, 50)
 flour = Ingredient.new("Flour", spice_cookie, 20)
 chemx = Ingredient.new("Chemical X", ppg, 1000)
+banana = Ingredient.new("Banana", mojo, 750)
 
 
 
-chocolate.bakery
+# chocolate.bakery
 
 
 puts "TESTS"
